@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="test">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="abc"/>
+    <schema id="4" parent="1" name="biaobai"/>
+    <schema id="5" parent="1" name="dgcms"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="laravel"/>
+    <schema id="8" parent="1" name="like"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="testmvc"/>
+    <schema id="12" parent="1" name="thinkphp"/>
+    <schema id="13" parent="1" name="zhihu"/>
+    <schema id="14" parent="1" name="zjh_mis"/>
+    <schema id="15" parent="1" name="zuwusu"/>
+    <table id="16" parent="2" name="migrations"/>
+    <table id="17" parent="2" name="password_resets"/>
+    <table id="18" parent="2" name="permission_role"/>
+    <table id="19" parent="2" name="permissions"/>
+    <table id="20" parent="2" name="posts"/>
+    <table id="21" parent="2" name="role_user"/>
+    <table id="22" parent="2" name="roles"/>
+    <table id="23" parent="2" name="users"/>
+    <column id="24" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="16" name="migration">
+      <Position>2</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="16" name="batch">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="17" name="email">
+      <Position>1</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="17" name="token">
+      <Position>2</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="17" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <index id="31" parent="17" name="password_resets_email_index">
+      <ColNames>email</ColNames>
+    </index>
+    <column id="32" parent="18" name="permission_id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="18" name="role_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="34" parent="18" name="permission_role_role_id_foreign">
+      <ColNames>role_id</ColNames>
+    </index>
+    <key id="35" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>permission_id
+role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="19" name="level">
+      <Position>3</Position>
+      <DataType>varchar(124)|0</DataType>
+    </column>
+    <column id="39" parent="19" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="40" parent="19" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <key id="41" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="20" name="user_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="20" name="title">
+      <Position>3</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="20" name="body">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="20" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="47" parent="20" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <index id="48" parent="20" name="posts_user_id_foreign">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="49" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="21" name="user_id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="21" name="role_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="52" parent="21" name="role_user_role_id_foreign">
+      <ColNames>role_id</ColNames>
+    </index>
+    <key id="53" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="55" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="22" name="level">
+      <Position>3</Position>
+      <DataType>varchar(124)|0</DataType>
+    </column>
+    <column id="57" parent="22" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="58" parent="22" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <key id="59" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="23" name="email">
+      <Position>3</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="23" name="password">
+      <Position>4</Position>
+      <DataType>varchar(124)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="23" name="remember_token">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="65" parent="23" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="66" parent="23" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <index id="67" parent="23" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="69" parent="23" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

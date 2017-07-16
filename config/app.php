@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'zh',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,7 +90,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'zh',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        Ultraware\Roles\RolesServiceProvider::class,
     ],
 
     /*

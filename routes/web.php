@@ -15,5 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::resource('posts', 'PostController');
+Route::get('step1', 'RoleController@step1');
+Route::get('step2', 'RoleController@step2');
+Route::get('step3', 'RoleController@step3');
+Route::get('step4', 'RoleController@step4');

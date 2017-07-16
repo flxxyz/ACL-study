@@ -2,12 +2,14 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Ultraware\Roles\Traits\HasRoleAndPermission;
+use Ultraware\Roles\Contracts\HasRoleAndPermission as HasRoleAndPermissionContract;
 
-class User extends Authenticatable
+class User extends Model implements HasRoleAndPermissionContract
 {
-    use Notifiable;
+    use HasRoleAndPermission;
 
     /**
      * The attributes that are mass assignable.
@@ -26,11 +28,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function owns($post)
-    {
-        return $this->id == $post->user_id;
-    }
-
-
 }
